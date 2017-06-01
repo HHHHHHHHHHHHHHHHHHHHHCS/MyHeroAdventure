@@ -8,6 +8,8 @@ public class PlayerCtrl : MonoBehaviour
     private PlayerKeyboard playerKeyCode;
     [SerializeField]
     private PlayerProperty playerProperty;
+    [SerializeField]
+    private LayerMask layer;
 
 
     private Vector2 boxSize;
@@ -26,7 +28,6 @@ public class PlayerCtrl : MonoBehaviour
     void Update()
     {
         Move();
-
     }
 
 
@@ -55,8 +56,8 @@ public class PlayerCtrl : MonoBehaviour
         {
             moveTimer -= Time.deltaTime;
         }
-        if (Input.GetKeyUp(playerKeyCode.Up)|| Input.GetKeyUp(playerKeyCode.Down) 
-            ||Input.GetKeyUp(playerKeyCode.Left) ||Input.GetKeyUp(playerKeyCode.Right) )
+        if (Input.GetKeyUp(playerKeyCode.Up) || Input.GetKeyUp(playerKeyCode.Down)
+            || Input.GetKeyUp(playerKeyCode.Left) || Input.GetKeyUp(playerKeyCode.Right))
         {
             _Idle();
         }
@@ -71,13 +72,35 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+
     void _Move(Vector2 dir)
     {
-        moveTimer = playerProperty.MoveTime;
-        transform.localPosition += new Vector3(dir.x * boxSize.x, dir.y * boxSize.y, 0);
-        if(playerAnimator!=null)
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, dir, boxSize.x, layer);
+        if (ray.collider != null)
         {
-            playerAnimator.PlayerAnim(dir);
+            if (playerAnimator != null)
+            {
+                playerAnimator.PlayerAnim(dir);
+            }
+            if (ray.collider.gameObject.layer == LayerMask.NameToLayer(Layers.Npc))
+            {
+                Debug.Log("碰到了NPC");
+            }
+            else
+            {
+                moveTimer = 0;
+
+            }
+        }
+        else
+        {
+            moveTimer = playerProperty.MoveTime;
+            transform.localPosition += new Vector3(dir.x * boxSize.x, dir.y * boxSize.y, 0);
+            if (playerAnimator != null)
+            {
+                playerAnimator.PlayerAnim(dir);
+            }
         }
     }
+
 }
