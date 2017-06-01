@@ -5,6 +5,6 @@ using UnityEngine;
 public class Layers
 {
     public const string Wall = "Wall";
-    public const string Npc = "Npc";
+    public const string NPC = "NPC";
     public const string Portal = "Portal";
 }

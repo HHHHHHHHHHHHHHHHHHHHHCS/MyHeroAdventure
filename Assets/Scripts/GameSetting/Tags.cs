@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tags
 {
-    public const string player = "Player";
+    public const string Player = "Player";
+    public const string NPC = "NPC";
 
 }
