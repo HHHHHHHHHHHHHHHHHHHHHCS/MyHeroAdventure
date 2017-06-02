@@ -1,9 +1,25 @@
 fileFormatVersion: 2
 guid: c00eaea70d6627644b5757e71fdd3fd2
-timeCreated: 1495517995
+timeCreated: 1496368865
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Item01-Gem05_0
+    21300002: Item01-Gem05_1
+    21300004: Item01-Gem05_2
+    21300006: Item01-Gem05_3
+    21300008: Item01-Gem05_4
+    21300010: Item01-Gem05_5
+    21300012: Item01-Gem05_6
+    21300014: Item01-Gem05_7
+    21300016: Item01-Gem05_8
+    21300018: Item01-Gem05_9
+    21300020: Item01-Gem05_10
+    21300022: Item01-Gem05_11
+    21300024: Item01-Gem05_12
+    21300026: Item01-Gem05_13
+    21300028: Item01-Gem05_14
+    21300030: Item01-Gem05_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -76,7 +92,215 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Item01-Gem05_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 86.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 86.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 86.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 86.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 58.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 58.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_7
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 58.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_9
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 30.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_10
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 30.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_11
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 30.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_13
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_14
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Item01-Gem05_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 2.25
+        width: 21.5
+        height: 28.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

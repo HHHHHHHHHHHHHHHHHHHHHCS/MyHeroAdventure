@@ -32,8 +32,9 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField]
     private PlayerProperty playerProperty;
     [SerializeField]
-    private LayerMask layer;
-
+    private LayerMask collideLayer;
+    [SerializeField]
+    private LayerMask itemLayer;
 
     private Vector2 boxSize;
     private PlayerAnimator playerAnimator;
@@ -107,7 +108,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void _Move(Vector2 dir)
     {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, dir, boxSize.x, layer);
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, dir, boxSize.x, collideLayer);
         if (ray.collider != null)
         {
             if (playerAnimator != null)
@@ -136,6 +137,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 playerAnimator.PlayerAnim(dir);
             }
+            RaycastHit2D itemRay = Physics2D.Raycast(transform.position, dir, boxSize.x, itemLayer);
         }
     }
 
