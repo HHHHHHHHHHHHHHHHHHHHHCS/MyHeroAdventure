@@ -137,7 +137,15 @@ public class PlayerCtrl : MonoBehaviour
             {
                 playerAnimator.PlayerAnim(dir);
             }
-            RaycastHit2D itemRay = Physics2D.Raycast(transform.position, dir, boxSize.x, itemLayer);
+            RaycastHit2D itemRay = Physics2D.Raycast(transform.position, dir, 0f, itemLayer);
+            if (itemRay.collider != null)
+            {
+                var i = itemRay.collider.GetComponent<Item_Base>();
+                if (i != null)
+                {
+                    i.GetItem();
+                }
+            }
         }
     }
 
