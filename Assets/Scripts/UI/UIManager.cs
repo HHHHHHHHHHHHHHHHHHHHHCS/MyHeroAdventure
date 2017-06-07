@@ -17,6 +17,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TalkPanel talkPanel;
 
+    [SerializeField]
+    private GetItemPanel getItemPanel;
+
     public TalkPanel TalkPanel
     {
         get
@@ -25,7 +28,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
+    public GetItemPanel GetItemPanel
+    {
+        get
+        {
+            return getItemPanel;
+        }
+    }
 
     private void Awake()
     {

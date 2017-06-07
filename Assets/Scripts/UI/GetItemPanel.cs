@@ -12,7 +12,9 @@ public class GetItemPanel : MonoBehaviour
     [SerializeField]
     private Image image;
     [SerializeField]
-    private Text text;
+    private Text titleText;
+    [SerializeField]
+    private Text contentText;
 
     private float imageAlpha;
     private float textAlpha;
@@ -20,11 +22,12 @@ public class GetItemPanel : MonoBehaviour
     private float imageAlphaSpeed;
     private float textAlphaSpeed;
 
+    private bool isShow;
 
     private void Awake()
     {
         imageAlpha = image.color.a;
-        textAlpha = text.color.a;
+        textAlpha = contentText.color.a;
 
         imageAlphaSpeed = hideTime <= 0 ? imageAlpha : imageAlpha / hideTime;
         textAlphaSpeed = hideTime <= 0 ? textAlpha : textAlpha / hideTime;
@@ -32,27 +35,38 @@ public class GetItemPanel : MonoBehaviour
 
     public void Update()
     {
-        Color col = image.color;
-        if (col.a <= 0)
+        if(isShow)
         {
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            col.a = Mathf.Clamp01(col.a - imageAlphaSpeed * Time.deltaTime);
-            image.color = col;
+            Color col = image.color;
+            if (col.a <= 0)
+            {
+                isShow = false;
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                col.a = Mathf.Clamp01(col.a - imageAlphaSpeed * Time.deltaTime);
+                image.color = col;
 
-            col = text.color;
-            col.a = Mathf.Clamp01(col.a - textAlphaSpeed * Time.deltaTime);
-            text.color = col;
+                col = titleText.color;
+                col.a = Mathf.Clamp01(col.a - textAlphaSpeed * Time.deltaTime);
+                titleText.color = col;
+
+                col = contentText.color;
+                col.a = Mathf.Clamp01(col.a - textAlphaSpeed * Time.deltaTime);
+                contentText.color = col;
+            }
         }
+
 
 
     }
 
     public void SetItem(params string[] items)
     {
-        text.text = "";
+        isShow = true;
+        gameObject.SetActive(true);
+        contentText.text = "";
         StringBuilder sb = new StringBuilder("");
         string end = items[items.Length - 1];
         foreach (var i in items)
@@ -63,13 +77,18 @@ public class GetItemPanel : MonoBehaviour
                 sb.Append('\n');
             }
         }
+        contentText.text = sb.ToString();
 
         Color col = image.color;
         col.a = imageAlpha;
         image.color = col;
 
-        col = text.color;
+        col = titleText.color;
         col.a = textAlpha;
-        text.color = col;
+        titleText.color = col;
+
+        col = contentText.color;
+        col.a = textAlpha;
+        contentText.color = col;
     }
 }

@@ -26,6 +26,8 @@ public class Item_Base : MonoBehaviour
 
     public virtual void GetItem()
     {
-        Debug.Log(itemProperty.name);
+        Destroy(gameObject);
+        UIManager.Instance.GetItemPanel.SetItem(itemProperty.name);
+        
     }
 }
